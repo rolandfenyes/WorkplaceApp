@@ -48,11 +48,19 @@ class HolidayActivity : AppCompatActivity(), DatePickerDialogFragment.OnDateSele
 
         if (DataManager.getRemainingHolidays() > 0 && dateValidation(year, month, dayOfMonth)) {
             DataManager.holidays = numHolidays + 1
+            checkRemainingHolidaysIfZero()
         } else {
             createErrorMessage()
         }
 
         loadHolidays()
+    }
+
+    fun checkRemainingHolidaysIfZero() {
+        if (DataManager.getRemainingHolidays() == 0) {
+            btnTakeHoliday.isEnabled = false
+            btnTakeHoliday.isClickable = false
+        }
     }
 
     fun createErrorMessage() {
