@@ -5,7 +5,7 @@ object DataManager {
     private const val HOLIDAY_MAX_VALUE = 20
     private const val HOLIDAY_DEFAULT_VALUE = 15
 
-    val holidays = HOLIDAY_DEFAULT_VALUE
+    var holidays = HOLIDAY_DEFAULT_VALUE
 
     val person: Person = Person(
         "Test User",
