@@ -20,5 +20,10 @@ class MenuActivity : AppCompatActivity() {
             val holidayIntent = Intent(this, HolidayActivity::class.java)
             startActivity(holidayIntent)
         }
+
+        btnPayment.setOnClickListener {
+            val paymentIntent = Intent(this, PaymentActivity::class.java)
+            startActivity(paymentIntent)
+        }
     }
 }
